@@ -1,19 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qcocusse <qcocusse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/06 13:30:34 by qcocusse          #+#    #+#             */
-/*   Updated: 2014/11/08 12:21:09 by qcocusse         ###   ########.fr       */
+/*   Created: 2014/11/04 14:26:31 by qcocusse          #+#    #+#             */
+/*   Updated: 2014/11/08 11:55:06 by qcocusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int			ft_isalpha(int c)
+#include <libft.h>
+
+void		ft_putstr(char *str)
 {
-	if (c >= 'A' && c <= 'Z' || c >= 'a' && c <= 'z')
-		return (1);
-	else
-		return (0);
+	int		i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		ft_putchar(str);
+		i++;
+	}
 }

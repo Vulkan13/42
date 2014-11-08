@@ -6,11 +6,9 @@
 /*   By: qcocusse <qcocusse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 14:45:51 by qcocusse          #+#    #+#             */
-/*   Updated: 2014/11/06 15:15:57 by qcocusse         ###   ########.fr       */
+/*   Updated: 2014/11/08 12:21:58 by qcocusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <libft.h>
 
 int			ft_isprint(int c)
 {
