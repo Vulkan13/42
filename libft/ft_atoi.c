@@ -1,19 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qcocusse <qcocusse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/06 13:30:34 by qcocusse          #+#    #+#             */
-/*   Updated: 2014/11/08 12:21:09 by qcocusse         ###   ########.fr       */
+/*   Created: 2014/11/04 12:13:24 by qcocusse          #+#    #+#             */
+/*   Updated: 2014/11/04 14:13:25 by qcocusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int			ft_isalpha(int c)
+int			ft_atoi(char *str)
 {
-	if (c >= 'A' && c <= 'Z' || c >= 'a' && c <= 'z')
-		return (1);
-	else
-		return (0);
+	int		i;
+	int		total;
+	int		nb;
+
+	i = 1;
+	total = str[0] - '0';
+	while (str[i])
+	{
+		total *= 10;
+		nb = str[i] - '0';
+		i++;
+	}
+	return (total);
 }

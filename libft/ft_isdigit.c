@@ -6,11 +6,9 @@
 /*   By: qcocusse <qcocusse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 13:39:00 by qcocusse          #+#    #+#             */
-/*   Updated: 2014/11/06 14:11:43 by qcocusse         ###   ########.fr       */
+/*   Updated: 2014/11/08 12:21:38 by qcocusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <libft.h>
 
 int 		ft_isdigit(int c)
 {
