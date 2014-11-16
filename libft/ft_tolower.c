@@ -6,13 +6,11 @@
 /*   By: qcocusse <qcocusse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 15:44:12 by qcocusse          #+#    #+#             */
-/*   Updated: 2014/11/06 15:46:25 by qcocusse         ###   ########.fr       */
+/*   Updated: 2014/11/14 11:12:21 by qcocusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
-
-int 		ft_tplower(int c)
+int			ft_tplower(int c)
 {
 	if (c >= 65 && c <= 90)
 	{

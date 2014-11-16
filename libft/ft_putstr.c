@@ -6,11 +6,11 @@
 /*   By: qcocusse <qcocusse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 14:26:31 by qcocusse          #+#    #+#             */
-/*   Updated: 2014/11/08 11:55:06 by qcocusse         ###   ########.fr       */
+/*   Updated: 2014/11/14 11:22:02 by qcocusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void		ft_putstr(char *str)
 {

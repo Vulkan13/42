@@ -6,11 +6,11 @@
 /*   By: qcocusse <qcocusse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 13:57:29 by qcocusse          #+#    #+#             */
-/*   Updated: 2014/11/04 14:24:51 by qcocusse         ###   ########.fr       */
+/*   Updated: 2014/11/14 11:10:48 by qcocusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int			ft_strlen(char *str);
+#include "libft.h"
 
 char		*ft_strdup(char *s)
 {
