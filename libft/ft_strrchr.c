@@ -6,7 +6,7 @@
 /*   By: qcocusse <qcocusse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/12 14:18:49 by qcocusse          #+#    #+#             */
-/*   Updated: 2014/11/12 15:29:57 by qcocusse         ###   ########.fr       */
+/*   Updated: 2014/11/14 11:08:05 by qcocusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char		*ft_strrchr(const char *s, int c)
 	while (i >= 0 && s[i] != (char)c)
 		i--;
 	if (s[i] == (char)c)
-		return ((char *) & s[i]);
+		return ((char*)&s[i]);
 	else
 		return (NULL);
 }

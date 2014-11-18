@@ -6,11 +6,11 @@
 /*   By: qcocusse <qcocusse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/08 15:00:46 by qcocusse          #+#    #+#             */
-/*   Updated: 2014/11/08 15:14:44 by qcocusse         ###   ########.fr       */
+/*   Updated: 2014/11/14 11:15:14 by qcocusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void		ft_memcpy(void *dst, const void *str, size_t n)
 {
