@@ -6,11 +6,11 @@
 /*   By: qcocusse <qcocusse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 15:44:12 by qcocusse          #+#    #+#             */
-/*   Updated: 2014/11/14 11:12:21 by qcocusse         ###   ########.fr       */
+/*   Updated: 2014/11/20 17:11:52 by qcocusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int			ft_tplower(int c)
+int			ft_tolower(int c)
 {
 	if (c >= 65 && c <= 90)
 	{

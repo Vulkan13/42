@@ -6,7 +6,7 @@
 /*   By: qcocusse <qcocusse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/08 11:41:20 by qcocusse          #+#    #+#             */
-/*   Updated: 2014/11/14 11:05:08 by qcocusse         ###   ########.fr       */
+/*   Updated: 2014/11/20 16:33:07 by qcocusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void		ft_bzero(void *s, size_t n)
 {
-	memset (s, '\0', n);
+	ft_memset(s, '\0', n);
 }
