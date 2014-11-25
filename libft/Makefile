@@ -6,7 +6,7 @@
 #    By: qcocusse <qcocusse@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/25 13:55:04 by qcocusse          #+#    #+#              #
-#    Updated: 2014/11/25 14:33:17 by qcocusse         ###   ########.fr        #
+#    Updated: 2014/11/25 16:01:25 by qcocusse         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -25,7 +25,13 @@ NAME:
 	ft_memmove.c \
 	ft_memset.c \
 	ft_putchar.c \
+	ft_putchar_fd.c \
+	ft_putendl.c \
+	ft_putendl_fd.c \
+	ft_putnbr.c \
+	ft_putnbr_fd.c \
 	ft_putstr.c \
+	ft_putstr_fd.c\
 	ft_strcat.c \
 	ft_strchr.c \
 	ft_strcmp.c \
@@ -57,7 +63,13 @@ OBJ:
 	ft_memmove.o \
 	ft_memset.o \
 	ft_putchar.o \
+	ft_putchar_fd.o \
+	ft_putendl.o \
+	ft_putendl_fd.o \
+	ft_putnbr.o \
+	ft_putnbr_fd.o \
 	ft_putstr.o \
+	ft_putstr_fd.o \
 	ft_strcat.o \
 	ft_strchr.o \
 	ft_strcmp.o \
@@ -80,6 +92,7 @@ all: $(NAME)
 
 $(NAME):
 	gcc -c $(src)
+	ar rc $(NAME) $(OBJ)
 
 clean:
 	rm -f $(OBJ)
