@@ -6,7 +6,7 @@
 /*   By: qcocusse <qcocusse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/25 15:35:37 by qcocusse          #+#    #+#             */
-/*   Updated: 2014/11/25 15:38:05 by qcocusse         ###   ########.fr       */
+/*   Updated: 2014/11/29 15:49:51 by qcocusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void		ft_putstr_fd(char const *s, int fd)
 	i = 0;
 	while (s[i] != '\0')
 	{
-		ft_putchar_fd(s, fd);
+		ft_putchar_fd(s[i], fd);
 		i++;
 	}
 }

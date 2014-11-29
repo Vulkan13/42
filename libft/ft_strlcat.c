@@ -6,7 +6,7 @@
 /*   By: qcocusse <qcocusse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/12 15:44:31 by qcocusse          #+#    #+#             */
-/*   Updated: 2014/11/12 15:49:17 by qcocusse         ###   ########.fr       */
+/*   Updated: 2014/11/29 16:25:06 by qcocusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,23 @@
 
 size_t		ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t		lengdst;
-	size_t		lengsrc;
+	size_t		lendst;
+	size_t		lensrc;
 
-	lengdst = ft_srtlen(dst);
-	lengsrc = ft_strlen(src);
-	if (size <= lengdst)
-		return (size + lengsrc);
-	if (lengsrc < size - lengdst)
+	lendst = ft_strlen(dst);
+	lensrc = ft_strlen(src);
+	if (size <= lendst)
+		return (size + lensrc);
+	if (lensrc < size - lendst)
 	{
-		ft_memcpy(dst + lengdst, src, lengsrc);
+		ft_memcpy(dst + lendst, src, lensrc);
+		dst += lendst + lensrc;
+	}
+	else
+	{
+		ft_memcpy(dst + lendst, src, size - lendst - 1);
 		dst += size - 1;
 	}
 	*dst = '\0';
-	return (lengsrc + lengdst);
+	return (lensrc + lendst);
 }

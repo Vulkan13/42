@@ -6,15 +6,15 @@
 /*   By: qcocusse <qcocusse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/08 12:08:28 by qcocusse          #+#    #+#             */
-/*   Updated: 2014/11/25 15:56:01 by qcocusse         ###   ########.fr       */
+/*   Updated: 2014/11/29 16:18:46 by qcocusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-
 # include <string.h>
 # include <unistd.h>
+# include <stdlib.h>
 
 int		ft_atoi(char *str);
 void	ft_bzero(void *s, size_t n);
@@ -41,9 +41,9 @@ char	*ft_strcat(char *dst, const char *src);
 char	*ft_strchr(const char *s, int c);
 int		ft_strcmp(char *s1, char *s2);
 char	*ft_strcpy(char *dst, const char *src);
-char	*ft_strdup(char *s);
-size_t	ft_strlcat(char *dst, const chr *src, size_t size);
-int		ft_strlen(char *str);
+char	*ft_strdup(const char *s);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
+int		ft_strlen(const char *str);
 char	*ft_strncat(char *dst, const char *src, size_t n);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strncpy(char *dst, const char *src, size_t n);

@@ -6,7 +6,7 @@
 /*   By: qcocusse <qcocusse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/25 15:16:42 by qcocusse          #+#    #+#             */
-/*   Updated: 2014/11/25 15:19:23 by qcocusse         ###   ########.fr       */
+/*   Updated: 2014/11/29 15:01:04 by qcocusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void		ft_putendl(char const *s)
 {
-	ft_putstr(*s);
+	ft_putstr(s);
 	ft_putchar('\n');
 }

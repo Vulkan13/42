@@ -6,13 +6,13 @@
 /*   By: qcocusse <qcocusse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 13:30:34 by qcocusse          #+#    #+#             */
-/*   Updated: 2014/11/08 12:21:09 by qcocusse         ###   ########.fr       */
+/*   Updated: 2014/11/29 14:39:10 by qcocusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int			ft_isalpha(int c)
 {
-	if (c >= 'A' && c <= 'Z' || c >= 'a' && c <= 'z')
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
 		return (1);
 	else
 		return (0);

@@ -6,11 +6,11 @@
 /*   By: qcocusse <qcocusse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 12:26:20 by qcocusse          #+#    #+#             */
-/*   Updated: 2014/11/04 15:14:35 by qcocusse         ###   ########.fr       */
+/*   Updated: 2014/11/29 16:20:51 by qcocusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int			ft_strlen(char *str)
+int			ft_strlen(const char *str)
 {
 	int		i;
 

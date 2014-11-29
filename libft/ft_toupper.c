@@ -6,11 +6,9 @@
 /*   By: qcocusse <qcocusse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 15:32:46 by qcocusse          #+#    #+#             */
-/*   Updated: 2014/11/06 15:42:03 by qcocusse         ###   ########.fr       */
+/*   Updated: 2014/11/29 16:12:57 by qcocusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <libft.h>
 
 int			ft_touper(int c)
 {

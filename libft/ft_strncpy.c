@@ -6,7 +6,7 @@
 /*   By: qcocusse <qcocusse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/20 16:16:52 by qcocusse          #+#    #+#             */
-/*   Updated: 2014/11/20 16:25:24 by qcocusse         ###   ########.fr       */
+/*   Updated: 2014/11/29 16:06:52 by qcocusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,18 @@
 
 char		*ft_strncpy(char *dst, const char *src, size_t n)
 {
-	int		i;
+	size_t		i;
 
 	i = 0;
-	while ((dst[i] && src[i]) || i < n)
+	while ((dst[i] || src[i]) && i < n)
 	{
 		dst[i] = src[i];
 		i++;
 	}
-	dst[i] = '\0';
+	while (i < n)
+	{
+		dst[i] = '\0';
+		i++;
+	}
 	return (dst);
 }

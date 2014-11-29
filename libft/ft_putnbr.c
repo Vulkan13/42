@@ -6,7 +6,7 @@
 /*   By: qcocusse <qcocusse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/25 15:21:41 by qcocusse          #+#    #+#             */
-/*   Updated: 2014/11/25 15:25:05 by qcocusse         ###   ########.fr       */
+/*   Updated: 2014/11/29 15:46:26 by qcocusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 
 void		ft_putnbr(int n)
 {
-	if (n < 0)
+	if (n == -2147483648)
+		ft_putstr("-2147483648");
+	else if (n < 0)
 	{
 		ft_putchar('-');
 		n = -n;
 	}
-	if (n >= 10)
+	else if (n >= 10)
 	{
 		ft_putnbr(n / 10);
 		ft_putnbr(n % 10);

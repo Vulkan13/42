@@ -6,11 +6,11 @@
 /*   By: qcocusse <qcocusse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/10 15:15:43 by qcocusse          #+#    #+#             */
-/*   Updated: 2014/11/14 11:11:25 by qcocusse         ###   ########.fr       */
+/*   Updated: 2014/11/29 16:12:29 by qcocusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char		*ft_strstr(const char *s1, const char *s2)
 {
