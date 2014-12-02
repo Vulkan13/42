@@ -1,38 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qcocusse <qcocusse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/04 12:13:24 by qcocusse          #+#    #+#             */
-/*   Updated: 2014/12/02 08:37:35 by qcocusse         ###   ########.fr       */
+/*   Created: 2014/12/02 10:26:43 by qcocusse          #+#    #+#             */
+/*   Updated: 2014/12/02 10:41:11 by qcocusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int			ft_atoi(char *str)
-{
-	int		neg;
-	int		value;
+#include "libft.h"
 
-	neg = 0;
-	value = 0;
-	while (*str == '\n' || *str == ' ' || *str == '\r' ||
-			*str == '\v' || *str == '\t' || *str == '\f')
-		str++;
-	if (*str == '+')
-		str++;
-	else if (*str == '-')
+char		*ft_strnew(size_t size)
+{
+	char	*ptr;
+
+	ptr = NULL;
+	ptr = ft_memalloc(size + 1);
+	if (size + 1)
 	{
-		neg = 1;
-		str++;
+		if (ptr == NULL)
+			return (NULL);
+		else
+			ft_bzero(ptr, size + 1);
 	}
-	while ((*str <= '9') && (*str >= '0'))
-	{
-		value = (value * 10) - (*str - '0');
-		str++;
-	}
-	if (!neg)
-		value = -value;
-	return (value);
+	return (ptr);
 }

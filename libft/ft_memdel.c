@@ -1,38 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_memdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qcocusse <qcocusse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/04 12:13:24 by qcocusse          #+#    #+#             */
-/*   Updated: 2014/12/02 08:37:35 by qcocusse         ###   ########.fr       */
+/*   Created: 2014/12/02 10:07:12 by qcocusse          #+#    #+#             */
+/*   Updated: 2014/12/02 10:11:31 by qcocusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int			ft_atoi(char *str)
-{
-	int		neg;
-	int		value;
+#include "libft.h"
 
-	neg = 0;
-	value = 0;
-	while (*str == '\n' || *str == ' ' || *str == '\r' ||
-			*str == '\v' || *str == '\t' || *str == '\f')
-		str++;
-	if (*str == '+')
-		str++;
-	else if (*str == '-')
+void		ft_memdel(void **ap)
+{
+	if (ap != NULL)
 	{
-		neg = 1;
-		str++;
+		free (*ap);
+		*ap = NULL;
 	}
-	while ((*str <= '9') && (*str >= '0'))
-	{
-		value = (value * 10) - (*str - '0');
-		str++;
-	}
-	if (!neg)
-		value = -value;
-	return (value);
 }
