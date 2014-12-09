@@ -1,38 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qcocusse <qcocusse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/04 12:13:24 by qcocusse          #+#    #+#             */
-/*   Updated: 2014/12/09 12:00:30 by qcocusse         ###   ########.fr       */
+/*   Created: 2014/12/09 09:39:55 by qcocusse          #+#    #+#             */
+/*   Updated: 2014/12/09 09:42:36 by qcocusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int			ft_atoi(char *str)
-{
-	int neg;
-	int value;
+#include "libft.h"
 
-	neg = 0;
-	value = 0;
-	while (*str == '\n' || *str == ' ' || *str == '\r' ||
-	*str == '\v' || *str == '\t' || *str == '\f')
-		str++;
-	if (*str == '+')
-		str++;
-	else if (*str == '-')
+int			ft_strequ(char const *s1, char const *s2)
+{
+	if (s1 && s2)
 	{
-		neg = 1;
-		str++;
+		if (ft_strcmp(s1, s2) == 0)
+			return (1);
 	}
-	while ((*str <= '9') && (*str >= '0'))
-	{
-		value = (value * 10) - (*str - '0');
-		str++;
-	}
-	if (!neg)
-		value = -value;
-	return (value);
+	return (0);
 }

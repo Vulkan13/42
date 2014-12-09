@@ -6,7 +6,7 @@
 /*   By: qcocusse <qcocusse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/08 12:08:28 by qcocusse          #+#    #+#             */
-/*   Updated: 2014/12/02 12:17:24 by qcocusse         ###   ########.fr       */
+/*   Updated: 2014/12/09 13:50:29 by qcocusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,15 +41,18 @@ void	ft_putstr(char const *s);
 void	ft_putstr_fd(char const *s, int fd);
 char	*ft_strcat(char *dst, const char *src);
 char	*ft_strchr(const char *s, int c);
-int		ft_strcmp(char *s1, char *s2);
+void	ft_strclr(char *s);
+int		ft_strcmp(char const *s1, char const *s2);
 char	*ft_strcpy(char *dst, const char *src);
 void	ft_strdel(char **as);
+int		ft_strequ(char const *s1, char const *s2);
 char	*ft_strdup(const char *s);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 int		ft_strlen(const char *str);
 char	*ft_strncat(char *dst, const char *src, size_t n);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strncpy(char *dst, const char *src, size_t n);
+int		ft_strnequ(char const *s1, char const *s2, size_t n);
 char	*ft_strnew(size_t size);
 char	*fr_strnstr(const char *s1, const char *s2, size_t n);
 char	*ft_strrchr(const char *s, int c);

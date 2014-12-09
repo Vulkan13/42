@@ -6,11 +6,11 @@
 /*   By: qcocusse <qcocusse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 12:38:59 by qcocusse          #+#    #+#             */
-/*   Updated: 2014/11/04 14:17:45 by qcocusse         ###   ########.fr       */
+/*   Updated: 2014/12/09 12:04:17 by qcocusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int			ft_strcmp(char *s1, char *s2)
+int			ft_strcmp(char const *s1, char const *s2)
 {
 	int				i;
 	unsigned char	*ss1;
