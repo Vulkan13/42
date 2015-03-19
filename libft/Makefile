@@ -6,7 +6,7 @@
 #    By: qcocusse <qcocusse@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/25 13:55:04 by qcocusse          #+#    #+#              #
-#    Updated: 2015/01/08 11:32:00 by scoudert         ###   ########.fr        #
+#    Updated: 2014/12/09 11:58:09 by qcocusse         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -28,22 +28,17 @@ FLAGS=-Wall -Werror -Wextra
 .PHONY: all, clean, fclean, re
 
 all:
-		@make $(NAME)
+		make $(NAME)
 
 $(NAME):
-		@gcc $(FLAGS) -c $(SRC)
-		@echo "\033[32mCompile all \".c\"\033[0m"
-		@ar rc $(NAME) $(OBJ)
-		@echo "\033[32mCompile all \".o\"\033[0m"
-		@ranlib $(NAME)
-		@echo "\033[36mCreate libft.a\033[0m"
+		gcc $(FLAGS) -c $(SRC)
+		ar rc $(NAME) $(OBJ)
+		ranlib $(NAME)
 
 clean:
-		@rm -f $(OBJ)
-		@echo "\033[31mDelete all \".o\"\033[0m"
+		rm -f $(OBJ)
 
 fclean: clean
-		@rm -f $(NAME)
-		@echo "\033[31mDelete libft.a\033[0m"
+		rm -f $(NAME)
 
 re: fclean all

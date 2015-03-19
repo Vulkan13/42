@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qcocusse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/01/09 11:25:13 by qcocusse          #+#    #+#             */
-/*   Updated: 2015/03/19 13:31:03 by qcocusse         ###   ########.fr       */
+/*   Created: 2015/03/19 10:45:40 by qcocusse          #+#    #+#             */
+/*   Updated: 2015/03/19 10:53:19 by qcocusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+char		*ft_strjoin(char const *s1, char const *s2)
 {
-	int	i;
+	int			len;
+	char		str;
 
-	i = 0;
-	if (s == NULL || (*f) == NULL)
-		return ;
-	while (s + i)
+	if (s1 && s2)
 	{
-		(*f)(i, s + i);
-		i++;
+		len = ft_strlen(s1) + ft_strlen(s2);
+		str = (char *) malloc(sizeof(char) * (len + 1));
+		if (str)
+		{
+			ft_strcpy(str, s1);
+			ft_strcpy(str, s2);
+		}
 	}
+	return (str);
 }
