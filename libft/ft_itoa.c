@@ -6,7 +6,7 @@
 /*   By: qcocusse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/19 14:42:04 by qcocusse          #+#    #+#             */
-/*   Updated: 2015/03/19 13:46:25 by qcocusse         ###   ########.fr       */
+/*   Updated: 2015/03/23 08:49:57 by qcocusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static int		ft_count(int n)
 	return (i);
 }
 
-static char		ft_fill(int n, char *s, int i)
+static char		*ft_fill(int n, char *s, int i)
 {
 	int temp;
 	int modulo;

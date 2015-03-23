@@ -6,7 +6,7 @@
 /*   By: qcocusse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/19 10:53:44 by qcocusse          #+#    #+#             */
-/*   Updated: 2015/03/19 13:40:56 by qcocusse         ###   ########.fr       */
+/*   Updated: 2015/03/23 09:18:08 by qcocusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char		*ft_strtrim(char const *s)
 
 	if (!s)
 		return (NULL);
-	star = 0;
+	start = 0;
 	while (*s == '\n' || *s == ' ' || *s == '\t')
 		s++;
 	len = ft_strlen(s);
