@@ -6,70 +6,47 @@
 /*   By: qcocusse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/19 14:42:04 by qcocusse          #+#    #+#             */
-/*   Updated: 2015/03/23 08:49:57 by qcocusse         ###   ########.fr       */
+/*   Updated: 2015/03/31 10:43:31 by qcocusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_count(int n)
+static void		length(int n, size_t *len, int *weight)
 {
-	int i;
-
-	i = 0;
-	while (n > 9 || n < 0)
+	*len = 1;
+	if (n >= 0)
 	{
-		i++;
-		n /= 10;
+		*len = 0;
+		n = -n;
 	}
-	i++;
-	return (i);
-}
-
-static char		*ft_fill(int n, char *s, int i)
-{
-	int temp;
-	int modulo;
-
-	modulo = 10;
-	temp = 1;
-	while (temp != 0)
+	*weight = 1;
+	while (n / *weight < -9)
 	{
-		temp = n % modulo;
-		if (temp < 0)
-			s[i] = (temp * (-1)) + '0';
-		else
-			s[i] = temp + '0';
-		i--;
-		n /= 10;
+		*weight *= 10;
+		*len += 1;
 	}
-	s[i] = '\0';
-	return (s);
 }
 
 char		*ft_itoa(int n)
 {
-	char	*s;
-	int		i;
-	int		temp;
+	size_t	len;
+	int		weight;
+	size_t	cur;
+	char	*str;
 
-	s = NULL;
-	i = 0;
-	temp = 0;
+	length(n, &len, &weight);
+	str = (char *)malloc(sizeof(*str) * (len + 1));
+	if (str == NULL)
+		return (NULL);
+	cur = 0;
 	if (n < 0)
-		temp += 1;
-	if (n == 0)
+		n = -n;
+	while (weight >= 1)
 	{
-		s = malloc(2);
-		s[1] = 0;
-		s[2] = '\0';
-		return (s);
+		str[cur++] = -(n / weight % 10) + 48;
+		weight /= 10;
 	}
-	i = ft_count(n);
-	s = malloc(i + 1 + temp);
-	i += temp;
-	s = ft_fill(n, s, i);
-	if (temp == 1)
-		s[0] = '-';
-	return (s);
+	str[cur] = '\0';
+	return (str);
 }

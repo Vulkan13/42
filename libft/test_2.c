@@ -6,7 +6,7 @@
 /*   By: darresti <darresti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 19:30:29 by darresti          #+#    #+#             */
-/*   Updated: 2015/01/08 14:01:15 by scoudert         ###   ########.fr       */
+/*   Updated: 2015/03/30 17:10:19 by qcocusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -152,7 +152,7 @@ static void	print_test_results_summary(int	return_value[], int control_value[], 
 		set(UNCOLOR);
 	}
 }
-/*
+
 static void	f_iter(char *pc)
 {
 	++(*pc);
@@ -172,7 +172,7 @@ static char	f_mapi(unsigned int i, char c)
 {
 	return (c + i);
 }
-
+/*
 static void	f_liter(t_list *lst)
 {
 	char	*str;
@@ -236,7 +236,7 @@ static int	ft_ncmp(char *str1, char *str2, size_t n)
 	return (-42);
 }
 
-/*static int	tabcmp(char **tab1, char **tab2)
+static int	tabcmp(char **tab1, char **tab2)
 {
 	if (tab1 && tab2)
 	{
@@ -251,7 +251,7 @@ static int	ft_ncmp(char *str1, char *str2, size_t n)
 	}
 	return (-24);
 }
-*/
+
 static void	test_sign(int test[], int ctrl[], int n)
 {
 	int		i;
@@ -276,7 +276,7 @@ static void	test_negate(int ctrl[], int n)
 		++i;
 	}
 }
-/*
+
 static void	free_tab(char **tab)
 {
 	int		i;
@@ -301,7 +301,7 @@ static void	free_ctrl_tab(char **tab)
 			free(tab[i++]);
 	}
 }
-*/
+
 /*******************************************************************************/
 /*                                                                             */
 /*                            TEST FUNCTIONS                                   */
@@ -493,7 +493,7 @@ static void	test_isspace(void)
 	print_test_results_summary(test, ctrl, 1024);
 }
 */
-/*
+
 static void	test_itoa(void)
 {
 	int		test[7], ctrl[7];
@@ -531,7 +531,7 @@ static void	test_itoa(void)
 	test[6] = cmp(str1, str2);
 	print_test_results(test, ctrl, 7, NULL);
 }
-*/
+
 /*
 static void	test_lstadd(void)
 {
@@ -762,7 +762,7 @@ static void	test_lstnew(void)
 	print_test_results(test, ctrl, 11, warning);
 }
 */
-/*static void	test_memalloc(void)
+static void	test_memalloc(void)
 {
 	int		test[2], ctrl[2];
 	void	*ptr;
@@ -785,7 +785,7 @@ static void	test_lstnew(void)
 	free(ptr);
 	print_test_results(test, ctrl, 2, NULL);
 }
-*/
+
 static void	test_memccpy(void)
 {
 	int		test[6], ctrl[6];
@@ -1175,7 +1175,7 @@ static void	test_strequ(void)
 	print_test_results(test, ctrl, 9, warning);
 #endif
 }
-/*
+
 static void	test_striter(void)
 {
 	int		test[2], ctrl[2];
@@ -1229,12 +1229,12 @@ static void	test_strjoin(void)
 	if (!str)
 		test[5] = 0;
 	free(str);
-// Tests 6 and 7 are a personnal opinion          
-// on what the behavior of strjoin should be when 
-// one of the pointers is NULL. Some will argue  
- //that we should return NULL in such a case.    
-// I chose to return a copy of the non NUL string
-// ( => behave like a strdup)                     
+	/* Tests 6 and 7 are a personnal opinion          */
+	/* on what the behavior of strjoin should be when */
+	/* one of the pointers is NULL. Some will argue   */
+	/* that we should return NULL in such a case.     */
+	/* I chose to return a copy of the non NUL string */
+	/* ( => behave like a strdup)                     */
 	str = ft_strjoin(NULL, "test");
 	test[6] = cmp("test", str);
 	free(str);
@@ -1261,10 +1261,9 @@ static void	test_strjoin(void)
 	print_test_results(test, ctrl, 8, warning);
 #else
 	print_test_results(test, ctrl, 5, warning);
-#endif
+#endif	
 }
-*/
-/*
+
 static void	test_strlcat(void)
 {
 	size_t	n;
@@ -1305,7 +1304,7 @@ static void	test_strlcat(void)
 	free(dst2);
 	print_test_results(test, ctrl, 4, NULL);
 }
-
+/*
 static void	test_strlcpy(void)
 {
 	int		test[6], ctrl[6];
@@ -1337,7 +1336,6 @@ static void	test_strlcpy(void)
 	free(dst2);
 	print_test_results(test, ctrl, 6, NULL);
 }
-
 */
 static void	test_strlen(void)
 {
@@ -1350,7 +1348,7 @@ static void	test_strlen(void)
 	ctrl[1] = ft_strlen("\001\002\003\004\005\200");
 	print_test_results(test, ctrl, 2, NULL);
 }
-/*
+
 static void	test_strmap(void)
 {
 	int		test[8], ctrl[8];
@@ -1416,7 +1414,7 @@ static void	test_strmapi(void)
 	print_test_results(test, ctrl, 4, NULL);
 #endif
 }
-*/
+
 static void	test_strncat(void)
 {
 	int		test[3], ctrl[3];
@@ -1645,7 +1643,7 @@ static void	test_strrchr(void)
 		test[2] = 0;
 	print_test_results(test, ctrl, 3, NULL);
 }
-/*
+
 static void	test_strsplit(void)
 {
 	int		test[11], ctrl[11];
@@ -1744,7 +1742,7 @@ static void	test_strsplit(void)
 	print_test_results(test, ctrl, 10, NULL);
 #endif
 }
-*/
+
 static void	test_strstr(void)
 {
 	int		test[6], ctrl[6];
@@ -1767,7 +1765,7 @@ static void	test_strstr(void)
 		test[5] = 0;
 	print_test_results(test, ctrl, 6, NULL);
 }
-/*
+
 static void	test_strsub(void)
 {
 	int		test[9], ctrl[9], warning[]={5, 6, 7, 8, -1};
@@ -1790,14 +1788,14 @@ static void	test_strsub(void)
 	test[2] = cmp("t s", ft_strsub("test string", 3, 3));
 	test[3] = cmp("g", ft_strsub("test string", 10, 1));
 	test[4] = cmp("g", ft_strsub("g", 0, 1));
-	// You're encourage to test this one more thouroughly but  
-	// since behaviour is undefined when start and size do not 
-	// point to a valid string, I can't force one on you.      
-	// For example, I could suggest something in the likes of: 
-	// return (NULL) if (size == 0 OR src[start] == '\0')      
-	// The following test are for this sort of implementation  
-	// Just ignore them if you would have your ft_strsub       
-	// behave differently (for example return "\0")            
+	/* You're encourage to test this one more thouroughly but  */
+	/* since behaviour is undefined when start and size do not */
+	/* point to a valid string, I can't force one on you.      */
+	/* For example, I could suggest something in the likes of: */
+	/* return (NULL) if (size == 0 OR src[start] == '\0')      */
+	/* The following test are for this sort of implementation  */
+	/* Just ignore them if you would have your ft_strsub       */
+	/* behave differently (for example return "\0")            */
 	dst = ft_strsub("test string", 10, 2);
 	test[5] = cmp("g", dst);
 	free(dst);
@@ -1882,7 +1880,7 @@ static void	test_strtrim(void)
 	print_test_results(test, ctrl, 16, warning);
 #endif
 }
-*/
+
 static void	test_tolower(void)
 {
 	int		i, test[1024], ctrl[1024];
@@ -1897,7 +1895,7 @@ static void	test_tolower(void)
 	}
 	print_test_results_summary(test, ctrl, 1024);
 }
-/*
+
 static void	test_toupper(void)
 {
 	int		i, test[1024], ctrl[1024];
@@ -1912,7 +1910,7 @@ static void	test_toupper(void)
 	}
 	print_test_results_summary(test, ctrl, 1024);
 }
-*/
+
 int			main(void)
 {
 #ifdef SEGFAULT_ME
@@ -1928,14 +1926,14 @@ int			main(void)
 	test_isdigit();
 	test_isprint();
 //	test_isspace(); /* not required */
-//	test_itoa();
+	test_itoa();
 //	test_lstadd();
 //	test_lstdel();
 //	test_lstdelone();
 //	test_lstiter();
 //	test_lstmap();
 //	test_lstnew();
-//	test_memalloc();
+	test_memalloc();
 	test_memccpy();
 	test_memchr();
 	test_memcmp();
@@ -1951,14 +1949,14 @@ int			main(void)
 	test_strdel();
 	test_strdup();
 	test_strequ();
-//	test_striter();
-//	test_striteri();
-//	test_strjoin();
-//	test_strlcat();
+	test_striter();
+	test_striteri();
+	test_strjoin();
+	test_strlcat();
 //	test_strlcpy(); /* not required */
 	test_strlen();
-//	test_strmap();
-//	test_strmapi();
+	test_strmap();
+	test_strmapi();
 	test_strncat();
 	test_strncmp();
 	test_strncpy();
@@ -1966,12 +1964,12 @@ int			main(void)
 	test_strnew();
 //	test_strnstr();
 	test_strrchr();
-//	test_strsplit();
+	test_strsplit();
 	test_strstr();
-//	test_strsub();
-//	test_strtrim();
+	test_strsub();
+	test_strtrim();
 	test_tolower();
-//	test_toupper();
+	test_toupper();
 	printf("If all you see is green, bear in mind this doesn't mean your functions are correct. It means I was not able to figure out what was wrong.\n");
 	printf("You are therefore strongly advised to try out the other tests available out there.\n");
 	printf(MAGENTA"Love and kisses, Zaphod."UNCOLOR"\n");

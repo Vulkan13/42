@@ -6,7 +6,7 @@
 /*   By: qcocusse <qcocusse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 12:13:24 by qcocusse          #+#    #+#             */
-/*   Updated: 2014/12/09 12:00:30 by qcocusse         ###   ########.fr       */
+/*   Updated: 2015/03/30 14:01:44 by qcocusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,6 @@ int			ft_atoi(char *str)
 		str++;
 	}
 	if (!neg)
-		value = -value;
+		value *= -1;
 	return (value);
 }

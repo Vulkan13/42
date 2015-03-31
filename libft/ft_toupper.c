@@ -6,17 +6,13 @@
 /*   By: qcocusse <qcocusse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 15:32:46 by qcocusse          #+#    #+#             */
-/*   Updated: 2014/11/29 16:12:57 by qcocusse         ###   ########.fr       */
+/*   Updated: 2015/03/23 13:32:20 by qcocusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int			ft_touper(int c)
+int			ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)
-	{
 		c = c - 32;
-		return (c);
-	}
-	else
-		return (c);
+	return (c);
 }

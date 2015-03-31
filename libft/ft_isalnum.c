@@ -6,7 +6,7 @@
 /*   By: qcocusse <qcocusse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 13:56:27 by qcocusse          #+#    #+#             */
-/*   Updated: 2014/11/14 11:13:43 by qcocusse         ###   ########.fr       */
+/*   Updated: 2015/03/23 10:34:16 by qcocusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 int			ft_isalnum(int c)
 {
-	if (ft_isalpha(c) != 0 && ft_isdigit(c))
-		return (0);
-	else
+	if (ft_isalpha(c) || ft_isdigit(c))
 		return (1);
+	return (0);
 }
